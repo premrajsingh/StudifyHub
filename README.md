@@ -9,7 +9,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/premrajsingh/StudifyHub?style=social)](https://github.com/premrajsingh/StudifyHub)
 [![GitHub forks](https://img.shields.io/github/forks/premrajsingh/StudifyHub?style=social)](https://github.com/premrajsingh/StudifyHub)
 
-[Core Features](#-core-features) • [Tech Stack](#-tech-stack) • [Technical Challenges](#-technical-challenges) • [Setup](#-installation)
+[Core Features](#-core-features) • [Architecture](#-system-architecture) • [Tech Stack](#-tech-stack) • [Skills](#-skills-demonstrated) • [Challenges](#-technical-challenges)
 
 </div>
 
@@ -46,12 +46,45 @@
 
 ---
 
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    User([User]) --> UI[Web Interface - HTML/CSS/JS]
+    UI --> Editor[Code Editor - CodeMirror]
+    UI --> Assistant[AI Assistant]
+    UI --> Translator[Language Translator]
+    
+    Editor --> GroqAPI[Groq API - Llama 3.3]
+    Assistant --> GroqAPI
+    Translator --> GroqAPI
+    
+    Editor -.-> LS[(LocalStorage)]
+    Assistant -.-> LS
+    
+    Translator --> Speech[Web Speech API]
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML5, CSS3 (Vanilla), JavaScript (ES6+), Bootstrap 5.3.
 - **Libraries**: CodeMirror (Editor), Font Awesome & Bootstrap Icons.
 - **APIs**: Groq API (Intelligence Engine), Web Speech API (TTS), Clipboard API.
 - **Storage**: LocalStorage API for client-side persistence (Zero-DB architecture).
+
+---
+
+## 💼 Skills Demonstrated
+
+| Category | Skills |
+|----------|---------|
+| **Frontend** | Semantic HTML, Responsive Design (Mobile-First), CSS Animations, Bootstrap Grid |
+| **JavaScript** | ES6+, Async/Await, DOM Manipulation, Event Handling, Regular Expressions |
+| **API Integration** | RESTful API Consumption, Error Handling, Request/Response Sanitization |
+| **State Management** | LocalStorage Persistence, Session Management (Client-side) |
+| **Engineering** | Performance Optimization, Modular Code Structure, Cross-Browser Compatibility |
 
 ---
 
@@ -64,6 +97,18 @@
 ### Zero-Latency Sidebar
 **Challenge**: Creating a persistent, smooth sidebar navigation for chat history.
 **Solution**: Implemented a custom CSS transition engine coupled with asynchronous DOM batching to ensure the UI remains buttery smooth even with large historical datasets.
+
+---
+
+## 📊 Project Statistics
+
+| Metric | Value |
+|--------|-------|
+| 📂 **Total Files** | 25+ |
+| 💻 **Lines of Code** | 2000+ |
+| 🔌 **API Integration** | Groq AI (Llama 3.3 70B) |
+| 📱 **Responsiveness** | Mobile, Tablet, Desktop (W3C Standard) |
+| 🔥 **Browser Storage** | Zero-database (Client-side localized) |
 
 ---
 
